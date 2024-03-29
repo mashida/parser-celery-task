@@ -53,16 +53,9 @@ def get_namespaces(xml_string):
     return namespaces
 
 
-COUNTER: int = 0
-
-
 @app.task
 def process_xml(page: str) -> str:
-    global COUNTER
     xml_content = requests.get(page, headers=HEADERS)
-    with open(f'xml_{COUNTER}.txt', 'wb') as f:
-        f.write(xml_content.content)
-        COUNTER = COUNTER + 1
     logger.info(f'process_xml | {xml_content.content=}')
     root = ET.fromstring(xml_content.content.decode('utf-8'))
     namespaces = get_namespaces(xml_content.content.decode('utf-8'))
