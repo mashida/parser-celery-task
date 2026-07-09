@@ -2,7 +2,7 @@ amqp==5.2.0
 beautifulsoup4==4.12.3
 billiard==4.2.0
 celery==5.3.6
-certifi==2024.2.2
+certifi==2024.7.4
 charset-normalizer==3.3.2
 click==8.1.7
 click-didyoumean==0.3.1
