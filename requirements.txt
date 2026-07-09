@@ -10,7 +10,7 @@ click-plugins==1.1.1
 click-repl==0.3.0
 colorama==0.4.6
 greenlet==3.0.3
-idna==3.6
+idna==3.15
 kombu==5.3.5
 prompt-toolkit==3.0.43
 python-dateutil==2.9.0.post0
